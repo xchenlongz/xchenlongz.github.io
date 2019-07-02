@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"always","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Welcome to Strike!This is Strike, a text editor with one goal: to make your life easier. At its core, Strike is a simple, powerful text editor. But with Markdown support, outlines, collaborative featu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to use Strike">
+<meta property="og:url" content="http://tric.cc/2019/07/02/Strike/index.html">
+<meta property="og:site_name" content="TR!C">
+<meta property="og:description" content="Welcome to Strike!This is Strike, a text editor with one goal: to make your life easier. At its core, Strike is a simple, powerful text editor. But with Markdown support, outlines, collaborative featu">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-02T07:19:10.650Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to use Strike">
+<meta name="twitter:description" content="Welcome to Strike!This is Strike, a text editor with one goal: to make your life easier. At its core, Strike is a simple, powerful text editor. But with Markdown support, outlines, collaborative featu">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://tric.cc/2019/07/02/Strike/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>How to use Strike | TR!C</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">TR!C</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/公益404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tric.cc/2019/07/02/Strike/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHANG">
+      <meta itemprop="description" content="!nformation is power.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TR!C">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">How to use Strike
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-02 15:18:22 / 修改时间：15:19:10" itemprop="dateCreated datePublished" datetime="2019-07-02T15:18:22+08:00">2019-07-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Welcome-to-Strike"><a href="#Welcome-to-Strike" class="headerlink" title="Welcome to Strike!"></a>Welcome to Strike!</h1><p>This is Strike, a text editor with one goal: to make your life easier.</p>
+<p>At its core, Strike is a simple, powerful text editor. But with Markdown support, outlines, collaborative features, and a whole lot more, it will become your new favorite productivity tool.</p>
+<p>Let’s take a look at some of Strike’s best features (and how you might use them).</p>
+<h1 id="1-Text-Elements"><a href="#1-Text-Elements" class="headerlink" title="1. Text Elements"></a>1. Text Elements</h1><h3 id="Paragraph"><a href="#Paragraph" class="headerlink" title="Paragraph"></a>Paragraph</h3><p>This is a paragraph. Hit Enter for a line break. That’s all there is to it.</p>
+<h3 id="Unordered-List"><a href="#Unordered-List" class="headerlink" title="Unordered List"></a>Unordered List</h3><ul>
+<li>Use Strike to  </li>
+<li>make a grocery list  </li>
+<li>for your week.  </li>
+</ul>
+<p>(Type an asterisk to start an unordered list.)</p>
+<h3 id="Ordered-List"><a href="#Ordered-List" class="headerlink" title="Ordered List"></a>Ordered List</h3><p>1 Use Strike to<br>2 rank your favorite<br>3 movies and books.  </p>
+<p>(Type “1.” to start an ordered list.)</p>
+<h3 id="Checklist"><a href="#Checklist" class="headerlink" title="Checklist"></a>Checklist</h3><p>[x] Try Strike’s features<br>[ ] Share your document<br>[ ] Collaborate with colleagues<br>[ ] Save time  </p>
+<p>(Type a dash to start a checklist.)</p>
+<h3 id="Blockquote"><a href="#Blockquote" class="headerlink" title="Blockquote"></a>Blockquote</h3><blockquote>
+<p>If you spend too much time thinking about a thing, you’ll never get it done.  </p>
+</blockquote>
+<p>—Bruce Lee</p>
+<p>(Start a line with &gt; for a blockquote.)</p>
+<h3 id="Horizontal-Rule"><a href="#Horizontal-Rule" class="headerlink" title="Horizontal Rule"></a>Horizontal Rule</h3><p>￼</p>
+<h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3><p>￼
+￼</p>
+<p>To insert an image, click the Attach File button in the right sidebar (or type ⇧⌘A) and select your image.</p>
+<p>You can use this to attach other kinds of files, too!</p>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>Make notes on your document without taking up extra space (click the icon to check it out):[Now you can leave notes for your collaborators without messing up the document.</p>
+<p>Or leave notes to yourself on future things to do, changes to make, or ideas you have yet to explore.]</p>
+<p>Hit ⇧⌘N to insert a new note.</p>
+<h3 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h3><p>Use tags to organize your document or highlight sections that you should come back to:</p>
+<p>Click #yourtag in the left sidebar to see it in action.</p>
+<h1 id="2-Markdown-Syntax"><a href="#2-Markdown-Syntax" class="headerlink" title="2. Markdown Syntax"></a>2. Markdown Syntax</h1><p>Strike supports Markdown for lightning-fast editing. Just use the following syntax to format your text:</p>
+<h3 id="Headings"><a href="#Headings" class="headerlink" title="Headings"></a>Headings</h3><table>
+<thead>
+<tr>
+<th>Heading Level</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>H1</td>
+<td># H1 heading</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>## H2 heading</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>### H3 heading</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>#### H4 heading</td>
+</tr>
+</tbody></table>
+<h3 id="Styles"><a href="#Styles" class="headerlink" title="Styles"></a>Styles</h3><table>
+<thead>
+<tr>
+<th>Style</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Italic</td>
+<td><em>italic</em></td>
+</tr>
+<tr>
+<td>Bold</td>
+<td><strong>bold</strong></td>
+</tr>
+<tr>
+<td>Underlined</td>
+<td><em>underlined</em></td>
+</tr>
+<tr>
+<td>Strikthrough</td>
+<td><del>strikethrough</del></td>
+</tr>
+</tbody></table>
+<p>You’ll get results like this: italic, bold, underlined, <del>strikethrough</del>.</p>
+<h3 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h3><table>
+<thead>
+<tr>
+<th>Link</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.strike-app.com/" target="_blank" rel="noopener">https://www.strike-app.com/</a></td>
+<td><a href="https://www.strike-app.com/" target="_blank" rel="noopener">Strike</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Here’s what it looks like when you link to <a href="https://www.strike-app.com/" target="_blank" rel="noopener">Strike</a> in a paragraph.</p>
+<p>(In Strike, you can also just type a URL and it will be converted to a link automatically.)</p>
+<h3 id="More-Markdown"><a href="#More-Markdown" class="headerlink" title="More Markdown"></a>More Markdown</h3><p>To find the full Markdown syntax, check out <a href="http://MarkdownGuide.org" target="_blank" rel="noopener">MarkdownGuide.org</a>.</p>
+<p>Here’s #yourtag again!</p>
+<h1 id="3-Tables"><a href="#3-Tables" class="headerlink" title="3. Tables"></a>3. Tables</h1><p>Click the Table icon in the right sidebar to insert a table:</p>
+<table>
+<thead>
+<tr>
+<th>Header 1</th>
+<th>Header 2</th>
+<th>Header 3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Then click in any cell to type. You can Tab through the table and right-click to add or delete rows and columns.</p>
+<h1 id="4-Charts"><a href="#4-Charts" class="headerlink" title="4. Charts"></a>4. Charts</h1><p>Strike includes the ability to quickly make professional-looking charts with just a bit of typing:</p>
+<p>￼</p>
+<p>To insert a chart, click the Chart button in the right sidebar. Then right-click the chart to edit it.</p>
+<p>You’ll need to type out your data in a specific format. Here’s how we created the chart above:</p>
+<p>Title,February,March,April,May,June,July<br>Expectations,6,2,7,1,10,11<br>Growth,12,19,3,5,2,3</p>
+<p>You can also change the type of chart. Just right-click on your chart and use the dropdown to select from</p>
+<ul>
+<li>bar,  </li>
+<li>horizontal bar,  </li>
+<li>line,  </li>
+<li>radar,  </li>
+<li>pie,  </li>
+<li>doughnut, and  </li>
+<li>polar area.  </li>
+</ul>
+<p>Here’s what the same graph looks like as a line graph:</p>
+<p>￼
+Experiment with different chart types to find the best one for your data!</p>
+<h1 id="5-LaTeX-Math"><a href="#5-LaTeX-Math" class="headerlink" title="5. LaTeX Math"></a>5. LaTeX Math</h1><p>You can use LaTeX mathematical syntax to create publication-quality equations and text.</p>
+<p>Here’s an example:</p>
+<p>￼
+To get started, click the LaTeX Math button in the right sidebar. Then right-click the box to enter your text.</p>
+<p>Here’s the text we used to create the box above:</p>
+<p>When (a \ne 0), there are two solutions to (ax^2 + bx + c = 0) and they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
+<p>To learn more about using LaTeX with MathJax, check out <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics" target="_blank" rel="noopener">the Mathematics chapter</a> of this LaTeX guide.</p>
+<h1 id="6-And-More"><a href="#6-And-More" class="headerlink" title="6. And More"></a>6. And More</h1><p>That’s not all! There are collaboration features, themes and colors, and sorting options, too. Check out the <a href="link">help files</a> for more details on those features.</p>
+<p>And if you’re still stuck, or you want to learn more, feel free to email us at <a href="email%20us">email address</a>.</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/30/Account Management Skills Overview/" rel="next" title="Account Management Skills Overview">
+                <i class="fa fa-chevron-left"></i> Account Management Skills Overview
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ZHANG</p>
+              <div class="site-description motion-element" itemprop="description">!nformation is power.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Welcome-to-Strike"><span class="nav-number">1.</span> <span class="nav-text">Welcome to Strike!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Text-Elements"><span class="nav-number">2.</span> <span class="nav-text">1. Text Elements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Paragraph"><span class="nav-number">2.0.1.</span> <span class="nav-text">Paragraph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unordered-List"><span class="nav-number">2.0.2.</span> <span class="nav-text">Unordered List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ordered-List"><span class="nav-number">2.0.3.</span> <span class="nav-text">Ordered List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Checklist"><span class="nav-number">2.0.4.</span> <span class="nav-text">Checklist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Blockquote"><span class="nav-number">2.0.5.</span> <span class="nav-text">Blockquote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Horizontal-Rule"><span class="nav-number">2.0.6.</span> <span class="nav-text">Horizontal Rule</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Image"><span class="nav-number">2.0.7.</span> <span class="nav-text">Image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes"><span class="nav-number">2.0.8.</span> <span class="nav-text">Notes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tags"><span class="nav-number">2.0.9.</span> <span class="nav-text">Tags</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Markdown-Syntax"><span class="nav-number">3.</span> <span class="nav-text">2. Markdown Syntax</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Headings"><span class="nav-number">3.0.1.</span> <span class="nav-text">Headings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Styles"><span class="nav-number">3.0.2.</span> <span class="nav-text">Styles</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Links"><span class="nav-number">3.0.3.</span> <span class="nav-text">Links</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#More-Markdown"><span class="nav-number">3.0.4.</span> <span class="nav-text">More Markdown</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Tables"><span class="nav-number">4.</span> <span class="nav-text">3. Tables</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Charts"><span class="nav-number">5.</span> <span class="nav-text">4. Charts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-LaTeX-Math"><span class="nav-number">6.</span> <span class="nav-text">5. LaTeX Math</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-And-More"><span class="nav-number">7.</span> <span class="nav-text">6. And More</span></a></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZHANG</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
